@@ -1,0 +1,21 @@
+[2024-05-24T12:17:10.402+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-24T12:17:10.425+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: web_scraping_to_json_dag.scrape_website scheduled__2024-05-23T00:00:00+00:00 [queued]>
+[2024-05-24T12:17:10.432+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: web_scraping_to_json_dag.scrape_website scheduled__2024-05-23T00:00:00+00:00 [queued]>
+[2024-05-24T12:17:10.442+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-05-24T12:17:10.458+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): scrape_website> on 2024-05-23 00:00:00+00:00
+[2024-05-24T12:17:10.467+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=61) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-24T12:17:10.470+0000] {standard_task_runner.py:63} INFO - Started process 65 to run task
+[2024-05-24T12:17:10.468+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'web_scraping_to_json_dag', 'scrape_website', 'scheduled__2024-05-23T00:00:00+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/web_scrapper_test_dag.py', '--cfg-path', '/tmp/tmpbn66zpln']
+[2024-05-24T12:17:10.471+0000] {standard_task_runner.py:91} INFO - Job 95: Subtask scrape_website
+[2024-05-24T12:17:10.523+0000] {task_command.py:426} INFO - Running <TaskInstance: web_scraping_to_json_dag.scrape_website scheduled__2024-05-23T00:00:00+00:00 [running]> on host 0010e6c6fd75
+[2024-05-24T12:17:10.619+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='web_scraping_to_json_dag' AIRFLOW_CTX_TASK_ID='scrape_website' AIRFLOW_CTX_EXECUTION_DATE='2024-05-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-23T00:00:00+00:00'
+[2024-05-24T12:17:10.623+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-24T12:17:12.717+0000] {logging_mixin.py:188} INFO - Microsoft Corporation (MSFT)
+[2024-05-24T12:17:12.719+0000] {python.py:237} INFO - Done. Returned value was: Microsoft Corporation (MSFT)
+[2024-05-24T12:17:12.720+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-24T12:17:12.738+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=web_scraping_to_json_dag, task_id=scrape_website, run_id=scheduled__2024-05-23T00:00:00+00:00, execution_date=20240523T000000, start_date=20240524T121710, end_date=20240524T121712
+[2024-05-24T12:17:12.777+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-24T12:17:12.792+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-24T12:17:12.794+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
